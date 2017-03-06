@@ -37,10 +37,8 @@ object Overpunch {
   )
 
   def decode(in: String, decimals: Int = 2): BigDecimal = {
-    println(s"decode $in, $decimals")
     val n = in.length
     val lastChar = in.takeRight(1)
-    println(s" --- decode $lastChar")
     val (sign, cent) = decode_map(lastChar)
 
     val core = (decimals == 0) match {
@@ -75,8 +73,6 @@ object Overpunch {
   )
 
   def encode(in: BigDecimal, decimals: Int = 2, rounding: RoundingMode.Value = RoundingMode.HALF_UP): String = {
-    println(s"encode $in, $decimals, $rounding")
-
     val rounded = in.setScale(decimals, rounding).rounded
     val sign = in.signum match {
       case 0 => 1
