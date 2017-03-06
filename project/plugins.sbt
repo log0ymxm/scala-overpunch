@@ -10,6 +10,7 @@ resolvers += "jgit-repo" at "http://download.eclipse.org/jgit/maven"
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "0.6.4")
 
-addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.5.8")
+resolvers += Resolver.typesafeRepo("releases")
+addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.6.0")
 
 addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")

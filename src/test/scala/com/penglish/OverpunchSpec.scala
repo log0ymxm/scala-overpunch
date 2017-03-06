@@ -15,11 +15,11 @@ class OverpunchSpec extends FunSuite with Matchers {
   }
 
   test("decode 4 decimal negative") {
-    Overpunch.decode("12345}", decimals=4) shouldEqual BigDecimal("-12.3450")
+    Overpunch.decode("12345}", decimals = 4) shouldEqual BigDecimal("-12.3450")
   }
 
   test("decode 0 decimal negative") {
-    Overpunch.decode("12345}", decimals=0) shouldEqual BigDecimal("-123450")
+    Overpunch.decode("12345}", decimals = 0) shouldEqual BigDecimal("-123450")
   }
 
   test("encode no decimal positive") {
@@ -31,31 +31,31 @@ class OverpunchSpec extends FunSuite with Matchers {
   }
 
   test("encode 4 decimal negative") {
-    Overpunch.encode(BigDecimal("-12.3450"), decimals=4) shouldEqual "12345}"
+    Overpunch.encode(BigDecimal("-12.3450"), decimals = 4) shouldEqual "12345}"
   }
 
   test("encode 0 decimal negative") {
-    Overpunch.encode(BigDecimal("-123450"), decimals=0) shouldEqual "12345}"
+    Overpunch.encode(BigDecimal("-123450"), decimals = 0) shouldEqual "12345}"
   }
 
   test("encode 2 decimal round default") {
-    Overpunch.encode(BigDecimal("12.3450"), decimals=2) shouldEqual "123E"
+    Overpunch.encode(BigDecimal("12.3450"), decimals = 2) shouldEqual "123E"
   }
 
   test("encode 2 decimal negative round default") {
-    Overpunch.encode(BigDecimal("-12.3450"), decimals=2) shouldEqual "123N"
+    Overpunch.encode(BigDecimal("-12.3450"), decimals = 2) shouldEqual "123N"
   }
 
   test("encode 2 decimal round custom") {
-    Overpunch.encode(BigDecimal("12.3450"), decimals=2, rounding=RoundingMode.FLOOR) shouldEqual "123D"
+    Overpunch.encode(BigDecimal("12.3450"), decimals = 2, rounding = RoundingMode.FLOOR) shouldEqual "123D"
   }
 
   test("encode 2 decimal negative round custom") {
-    Overpunch.encode(BigDecimal("-12.3450"), decimals=2, rounding=RoundingMode.FLOOR) shouldEqual "123N"
+    Overpunch.encode(BigDecimal("-12.3450"), decimals = 2, rounding = RoundingMode.FLOOR) shouldEqual "123N"
   }
 
   test("encode integer") {
-    Overpunch.encode(150, decimals=0) shouldEqual "15{"
+    Overpunch.encode(150, decimals = 0) shouldEqual "15{"
   }
 
 }

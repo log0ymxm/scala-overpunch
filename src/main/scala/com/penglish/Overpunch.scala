@@ -80,7 +80,7 @@ object Overpunch {
     }
     val value = new StringBuilder(rounded.abs.toString.replace(".", ""))
     val n = value.length
-    value.setCharAt(n-1, encode_map((sign, value.toString.takeRight(1))))
+    value.setCharAt(n - 1, encode_map((sign, value.toString.takeRight(1))))
     value.toString()
   }
 }
