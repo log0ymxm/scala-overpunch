@@ -83,7 +83,4 @@ object Overpunch {
     value.setCharAt(n-1, encode_map((sign, value.toString.takeRight(1))))
     value.toString()
   }
-
-  // def encode(in: Int, decimals: Int = 2, rounding: RoundingMode.Value = RoundingMode.HALF_UP): String =
-  //   encode(BigDecimal(in), decimals, rounding)
 }
