@@ -3,7 +3,7 @@ Decode (and encode if you _really_ want to) [overpunch](https://en.wikipedia.org
 ## Examples
 
 ```scala
-import com.penglish.Overpunch
+import com.github.log0ymxm.Overpunch
 
 Overpunch.decode("10}", decimals=0) == BigDecimal("-100")
 Overpunch.decode("45A", decimals=0) == BigDecimal("451")

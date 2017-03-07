@@ -1,6 +1,6 @@
 name := "scala-overpunch"
 
-organization := "com.penglish"
+organization := "com.github.log0ymxm"
 
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 
