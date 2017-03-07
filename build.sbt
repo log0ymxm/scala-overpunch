@@ -1,6 +1,6 @@
 name := "scala-overpunch"
 
-version := "1.0.0"
+version := "1.0.1"
 
 organization := "com.github.log0ymxm"
 
@@ -23,9 +23,17 @@ publishMavenStyle := true
 
 publishArtifact in Test := false
 
-publishTo := Some(if (isSnapshot.value) Opts.resolver.sonatypeSnapshots else Opts.resolver.sonatypeStaging)
+publishTo := {
+  val nexus = "https://oss.sonatype.org/"
+  if (isSnapshot.value)
+    Some("snapshots" at nexus + "content/repositories/snapshots")
+  else
+    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
+}
 
 credentials += Credentials(Path.userHome / ".ivy2" / ".credentials")
+
+pomIncludeRepository := { _ => false }
 
 pomExtra :=
   <developers>
