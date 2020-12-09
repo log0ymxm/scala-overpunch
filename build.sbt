@@ -1,6 +1,6 @@
 name := "scala-overpunch"
 
-version := "1.0.2"
+version := "2.0.0"
 
 organization := "com.github.log0ymxm"
 
@@ -10,7 +10,7 @@ licenses += ("MIT", url("https://github.com/log0ymxm/scala-overpunch/blob/master
 
 javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.10"
 
 libraryDependencies ++= Seq(
   "org.scalatest" %% "scalatest" % "3.0.1" % "test",

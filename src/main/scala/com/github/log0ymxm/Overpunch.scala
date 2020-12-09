@@ -33,8 +33,7 @@ object Overpunch {
     "O" -> ("-", "6"),
     "P" -> ("-", "7"),
     "Q" -> ("-", "8"),
-    "R" -> ("-", "9")
-  )
+    "R" -> ("-", "9"))
 
   def decode(in: String, decimals: Int = 2): BigDecimal = {
     val n = in.length
@@ -69,8 +68,7 @@ object Overpunch {
     (-1, "6") -> 'O',
     (-1, "7") -> 'P',
     (-1, "8") -> 'Q',
-    (-1, "9") -> 'R'
-  )
+    (-1, "9") -> 'R')
 
   def encode(in: BigDecimal, decimals: Int = 2, rounding: RoundingMode.Value = RoundingMode.HALF_UP): String = {
     val rounded = in.setScale(decimals, rounding).rounded
